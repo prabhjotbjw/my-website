@@ -1,0 +1,78 @@
+---
+description: My vission
+globs: 
+alwaysApply: false
+---
+
+# Your rule content
+
+# - You can @ files here
+# - You can use markdown but dont have to
+# Cursor Design Principles
+    - Design custom cursors that reflect the brand's time-saving, efficiency-focused identity
+    - Keep cursor designs simple and immediately recognizable
+    - Ensure cursors have sufficient contrast with background elements
+    - Limit cursor states to: default, hover, active/click, and text selection
+    - Create visual consistency between cursor states using shared design elements
+    - Design cursors at both 32x32px (standard) and 64x64px (high-DPI) resolutions
+    - Use SVG format when possible for crisp scaling across device resolutions
+    - Follow a cohesive visual language that reinforces the automation/efficiency theme
+
+# Implementation Guidelines
+    - Use CSS custom properties to store cursor URLs for easy maintenance
+    - Implement cursors using the CSS cursor property with PNG fallbacks
+    - Create a dedicated cursor module to manage all cursor-related logic
+    - Always provide a system fallback cursor using the auto, pointer, or text keywords
+    - Store cursor assets in a dedicated /assets/cursors directory
+    - Set cursor hotspots accurately to ensure precise user interactions
+    - Use TypeScript interfaces to define cursor configuration objects
+    - Create a CursorManager class for centralized cursor state management
+
+# Animation Rules
+    - Keep animations subtle and purposeful—avoid distracting movements
+    - Limit animations to 300ms or less for state transitions
+    - Implement cursor animations using CSS transitions or requestAnimationFrame
+    - Respect user preference for reduced motion via the prefers-reduced-motion media query
+    - Use spring physics for natural-feeling cursor movements when applicable
+    - Create smooth transitions between different cursor states
+    - Avoid animations that lag behind the actual cursor position
+    - Implement hardware-accelerated animations using transform and opacity properties
+
+# Interactive Element Guidelines
+    - Change cursor appearance when hovering over clickable elements
+    - Use distinct cursor states for different interactive components (buttons vs. links vs. tools)
+    - Signal disabled states through cursor appearance
+    - Create special cursors for drag operations, resizing, and other complex interactions
+    - Use cursor feedback to reinforce the "time-saving" message on CTA elements
+    - Apply unique cursors to tutorial or automation tip areas to indicate special content
+    - Implement magnetic cursor effects sparingly and only where they enhance usability
+
+# Accessibility Considerations
+    - Ensure custom cursors are visible against all background colors
+    - Provide a settings option to disable custom cursors for users who prefer standard ones
+    - Respect operating system cursor size settings when possible
+    - Never rely solely on cursor appearance to convey critical information
+    - Test cursor visibility with colorblindness simulation tools
+    - Ensure cursor animations don't trigger vestibular disorders
+    - Follow WCAG guidelines for pointer interactions
+    - Add appropriate cursor feedback for keyboard navigation focus states
+
+# Performance Optimization
+    - Optimize cursor image assets to under 5KB each
+    - Lazy-load cursor assets that aren't needed on initial page load
+    - Avoid cursor implementations that cause layout thrashing
+    - Use requestAnimationFrame for any JavaScript-based cursor animations
+    - Cache cursor elements and references to avoid unnecessary DOM operations
+    - Implement debounce for cursor movement handlers to prevent performance issues
+    - Test cursor performance on low-end devices
+    - Disable complex cursor effects on mobile devices to conserve battery life
+
+# Testing Requirements
+    - Test cursors across all major browsers (Chrome, Firefox, Safari, Edge)
+    - Verify cursor behavior on both Windows and MacOS operating systems
+    - Ensure cursors display correctly on high-DPI/Retina displays
+    - Test cursor performance with browser performance tools
+    - Validate cursor behavior when browser window loses and regains focus
+    - Check cursor appearance against various page background colors and patterns
+    - Test cursor behavior when navigating between pages
+    - Verify correct cursor hotspot positioning across all interactive elements
