@@ -3,7 +3,7 @@
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import EmailSignup from '@/components/ui/EmailSignup';
+import NotifyButton from '@/components/ui/NotifyButton';
 import CountdownTimer from '@/components/ui/CountdownTimer';
 import FeaturesPreview from '@/components/ui/FeaturesPreview';
 import QuoteCarousel from '@/components/ui/QuoteCarousel';
@@ -231,7 +231,7 @@ export default function Home() {
               </div>
               
               <div className="w-full max-w-md mb-16">
-                <EmailSignup />
+                <NotifyButton />
               </div>
               
               <CountdownTimer />

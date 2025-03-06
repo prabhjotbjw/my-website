@@ -25,9 +25,8 @@ const CountdownTimer: React.FC = () => {
     // Mark component as mounted
     setIsMounted(true);
     
-    // Set launch date to 30 days from now
-    const launchDate = new Date();
-    launchDate.setDate(launchDate.getDate() + 30);
+    // Set launch date to May 13, 2025
+    const launchDate = new Date('2025-05-13T00:00:00');
     
     const calculateTimeLeft = (): TimeLeft => {
       const difference = +launchDate - +new Date();
